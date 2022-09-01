@@ -29,6 +29,9 @@ body{
     margin-left: 1%;
     margin-right: 2.5%;
 }
+.refresh-btn:hover, .music-btn:hover{
+    opacity: 0.9;
+}
 .music-btn{
     height: 50px;
     width: 50px;

@@ -12,9 +12,11 @@ var isMusicOn = false;
 
 function playBGM() {
     if(isMusicOn){
+        document.getElementById("changeImg").src = "assets/musicOff.png";
         backgroundMusic.pause();
     }
     else{
+        document.getElementById("changeImg").src = "assets/musicOn.png";
         backgroundMusic.play();
     }
     isMusicOn = !isMusicOn;
