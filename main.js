@@ -5,7 +5,7 @@ let score = 0
 
 const sound = new Audio("assets/NomNomNom.mp3")
 
-var backgroundMusic = new Audio("assets/Jungle Area - Welcome to the jungle.mp3");
+var backgroundMusic = new Audio("assets/WelcomeToTheJungle.mp3");
 backgroundMusic.autoplay = true;
 backgroundMusic.loop = true;
 var isMusicOn = false;
