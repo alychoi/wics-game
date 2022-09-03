@@ -9,8 +9,9 @@
 </head>
 <body>
     <div class="header">
-        <img class="refresh-btn" src="assets/replay.png" onClick="window.location.reload();" />
-        <img id="changeImg" class="music-btn" src="assets/musicOff.png" onClick="playBGM()"/>
+        <img class="refreshBtn" src="assets/replay.png" onClick="window.location.reload();" draggable="false"/>
+        <img id="musicBtn" src="assets/musicOff.png" onClick="playBGM()" draggable="false"/>
+        <img id="pauseBtn" src="assets/pause.png" onClick="pauseGame()" draggable="false"></img>
         <h1 class="score">SCORE: <span>00</span></h1>
     </div>
     <div class="board">
@@ -25,6 +26,10 @@
         <div class="hole"></div>
     </div>
     <div class="cursor"></div>
+
+    <div id="modal">
+        <h1 id="modalContent">GAME PAUSED</h1>
+    </div>
 
     <script src="main.js">
     </script>

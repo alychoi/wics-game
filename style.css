@@ -2,9 +2,11 @@
     margin: 0;
     padding: 0;
 }
+
 html, body{
     height: 100%;
 }
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(58, 129, 0);
@@ -15,13 +17,15 @@ body{
     align-items: center;
     overflow: hidden;
 }
+
 .header{
     display: flex;
     width: 100%;
     align-self: flex-start;
     padding: 0;
 }
-.refresh-btn{
+
+.refreshBtn{
     height: 50px;
     width: 50px;
     align-self: flex-start;
@@ -29,22 +33,35 @@ body{
     margin-left: 1%;
     margin-right: 2.5%;
 }
-.refresh-btn:hover, .music-btn:hover{
-    opacity: 0.9;
-}
-.music-btn{
+
+#musicBtn{
     height: 50px;
     width: 50px;
     align-self: flex-start;
     margin-top: 0.75%;
-    margin-right: 57.5%;
+    margin-right: 3.5%;
 }
+
+#pauseBtn{
+    height: 40px;
+    width: 40px;
+    align-self: flex-start;
+    margin-top: 1%;
+    margin-right: 55%;
+}
+
+.refreshBtn:hover, #musicBtn:hover, #pauseBtn:hover{
+    opacity: 0.9;
+}
+
 .score{
     font-size: 4em;
     margin-bottom: .5em;
     align-self: flex-end;
     width: 100%;
+    user-select: none;
 }
+
 .board{
     height: 600px;
     width: 600px;
@@ -53,6 +70,7 @@ body{
     grid-template-rows: repeat(3, 1fr);
     gap: 80px;
 }
+
 .hole{
     background-color: rgb(165, 85, 11);
     border-radius: 50%;
@@ -62,6 +80,7 @@ body{
     position: relative;
     overflow: hidden;
 }
+
 .hole .Hopper{
     width: 60%;
     position: absolute;
@@ -79,6 +98,26 @@ body{
     }
 }
 
+#modal{
+    visibility: hidden;
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    opacity: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modalContent{
+    font-size: 5em;
+    user-select: none;
+}
+
 .cursor{
     height: 100px;
     width: 90px;
@@ -91,6 +130,7 @@ body{
     transition: transform .1s;
     pointer-events: none;
 }
+
 .cursor.active{
     transform: translate(-20%, -20%) rotate(-45deg);
 }
