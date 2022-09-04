@@ -58,7 +58,6 @@ run()
 function resumeGame(){
     document.getElementById("modal").style.visibility = 'hidden';
     document.getElementById("pauseBtn").src = "assets/pause.png";
-    clearTimeout();
     run();
 }
 
@@ -69,8 +68,6 @@ function pauseGame(){
         resumeGame();
     }
     else{
-        clearTimeout();
-
         document.getElementById("modal").style.visibility = 'visible';
         document.getElementById("pauseBtn").src = "assets/play.png";
 
