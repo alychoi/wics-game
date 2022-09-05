@@ -4,23 +4,40 @@ const scoreEl = document.querySelector('.score span')
 let score = 0
 
 const sound = new Audio("assets/NomNomNom.mp3");
-const backgroundMusic = new Audio("assets/WelcomeToTheJungle.mp3");
-backgroundMusic.autoplay = true;
-backgroundMusic.loop = true;
+const backgroundMusic1 = new Audio("assets/WelcomeToTheJungle.mp3");
+const backgroundMusic2 = new Audio("assets/LostWoods.mp3");
 
-var isMusicOn = false;
+backgroundMusic1.autoplay = true;
+backgroundMusic1.loop = true;
+backgroundMusic1.loop = true;
+
 var gamePaused = false;
+var isMusicOn = false;
+var musicVer = 1;
+
 
 function playBGM() {
-    if(isMusicOn){
-        document.getElementById("musicBtn").src = "assets/musicOff.png";
-        backgroundMusic.pause();
+    if(!isMusicOn){
+        document.getElementById("musicBtn").src = "assets/bgm1.png";
+        isMusicOn = true;
+        musicVer = 1;
+        backgroundMusic1.currentTime = 0;
+        backgroundMusic1.play();
     }
     else{
-        document.getElementById("musicBtn").src = "assets/musicOn.png";
-        backgroundMusic.play();
+        if(musicVer == 1){
+            document.getElementById("musicBtn").src = "assets/bgm2.png";
+            backgroundMusic1.pause();
+            backgroundMusic2.currentTime = 0;
+            backgroundMusic2.play();
+        }
+        else{
+            document.getElementById("musicBtn").src = "assets/musicOff.png";
+            backgroundMusic2.pause();
+            isMusicOn = false;
+        }
+        musicVer = (musicVer == 1) ? 2 : 1;
     }
-    isMusicOn = !isMusicOn;
 }
 
 function run(){
