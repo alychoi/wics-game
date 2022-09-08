@@ -9,7 +9,7 @@ const backgroundMusic2 = new Audio("assets/LostWoods.mp3");
 
 backgroundMusic1.autoplay = true;
 backgroundMusic1.loop = true;
-backgroundMusic1.loop = true;
+backgroundMusic2.loop = true;
 
 var gamePaused = false;
 var isMusicOn = false;
