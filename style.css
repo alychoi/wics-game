@@ -134,3 +134,33 @@ body{
 .cursor.active{
     transform: translate(-20%, -20%) rotate(-45deg);
 }
+
+@media screen and (max-width: 820px){
+    #pauseBtn{
+        margin-right: 45%;
+    }
+
+    .score{
+        font-size: 3em;
+    }
+
+    .board{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (max-width: 481px){
+    #pauseBtn{
+        margin-right: 17.5%;
+    }
+
+    .score{
+        font-size: 1.5em;
+    }
+
+    .board{
+        height: 40%;
+        width: 70%;
+        gap: 5%;
+    }
+}
